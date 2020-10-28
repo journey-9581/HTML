@@ -7,12 +7,12 @@
 </head>
 <body>
     <h1>폼 요소 작성하기</h1>
-    <form action="login.jsp">
-        <label for="email">이메일</label>
+    <form action="login.jsp"> <!-- 입력 양식 -->
+        <label for="email">이메일</label> <!-- label for와 input id는 같아야 한다 -->
         <input type="text" id="email" name="email">
         <label for="pwd">비밀번호</label>
-        <input type="text" id="pwd" name="pwd">
-        <button type="submit">로그인</button>
+        <input type="password" id="pwd" name="pwd"> <!--text와 password의 차이점: 입력하는 내용을 볼 수 있는가 없는가 -->
+        <button type="submit">로그인</button> <!-- submit 하면 form action="서버"로 전송 -->
     </form>
 </body>
 </html>
