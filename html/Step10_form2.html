@@ -17,9 +17,9 @@
         </label>
         <label>
             <input type="radio" name="gender" value="woman" checked> 여자 
-            <!-- checked = 페이지가 로딩 된 시점에 어디가 체크되어 시작되게 할건지-->
+            <!-- checked = 페이지가 로딩 된 시점에 어디가 체크되어 시작되게 할건지 -->
         </label>
-        <!-- name 속성값이 같아야 한 그룹으로 묶임-->
+        <!-- name 속성값이 같아야 한 그룹으로 묶임 -->
         <label>
             <input type="radio" name="gender2" value="no"> 모름
         </label>
@@ -54,12 +54,37 @@
         <br><br>
 
         <label for="lunch">점심 메뉴 선택</label>
-        <select name="lunch" id="lunch" multiple> <!--multipe 여러개를 선택 가능-->
+        <select name="lunch" id="lunch" multiple> <!-- multipe 여러개를 선택 가능 -->
             <option value="">선택</option>
             <option value="m1">짜장면</option>
             <option value="m2">짬뽕</option>
             <option value="m3">군만두</option>
             <option value="m4">탕수육</option>
+        </select>
+        <br><br>
+
+        <label for="lunch">점심 메뉴 선택</label><!-- option에 value가 없으면 innertext가 value로 전송 -->
+        <select name="lunch" id="lunch" multiple>
+            <option>선택</option>
+            <option>짜장면</option>
+            <option>짬뽕</option>
+            <option>군만두</option>
+            <option>탕수육</option>
+        </select>
+        <br><br>
+
+        <label for="coffee">커피 선택</label>
+        <select name="coffee" id="coffee">
+            <optgroup label="에스프레소">
+                <option>아메리카노</option>
+                <option>카페라떼</option>
+                <option>카페모카</option>
+            </optgroup>
+            <optgroup label="프라프치노">
+                <option>카라멜 프라프치노</option>
+                <option>자바칩 프라프치노</option>
+                <option>오렌지 프라프치노</option>
+            </optgroup>
         </select>
         <br><br>
 
