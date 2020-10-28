@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step10_form3.html</title>
+    <style>
+        .container{ 
+            width: 768px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: yellow;
+        }
+    </style>
+    <!-- 요소명이 아닌 클래스 단위로 선택할 때는 클래스명 앞에 .을 붙여 범위 정하기-->
+     <!--폭을 결정하고 좌우 margin을 똑같이 해놓으면 양쪽이 똑같이 잡힘-->
+</head>
+<body>
+    <div class="container">
+        클래스 속성의 값이 container인 div 입니다
+    </div>
+    <div>
+        클래스 속성이 없는 div 입니다
+    </div>
+    <div class="container">
+        <h1>table 요소를 이용해서 form 요소의 줄 맞추기</h1>
+        <form action="login.jsp">
+            <table>
+                <tr>
+                    <td><label for="email">이메일</label></td>
+                    <td><input type="text" name="email" id="email"></td>
+                </tr>
+                <tr>
+                    <td><label for="pwd">비밀번호</label></td>
+                    <td><input type="password" name="pwd" id="pwd"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="submit">로그인</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <br><br>
+    <h1>table 요소를 이용해서 form 요소의 줄 맞추기</h1>
+    <form action="login.jsp">
+        <table>
+            <tr>
+                <td><label for="email">이메일</label></td>
+                <td><input type="text" name="email" id="email"></td>
+            </tr>
+            <tr>
+                <td><label for="pwd">비밀번호</label></td>
+                <td><input type="password" name="pwd" id="pwd"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="submit">로그인</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
