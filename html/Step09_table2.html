@@ -4,11 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Step09_table2.html</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+    </style>
 </head>
 <body>
     <h1>table 요소 사용하기</h1>
     <table border="1">
-        <caption>회원 목록</caption>
+        <caption>회원 목록</caption> <!--표 제목-->
+        <colgroup>
+            <col width="100">
+            <col width="200">
+            <col width="300">
+        </colgroup>
         <thead>
             <tr>
                 <th>번호</th>
@@ -16,10 +26,59 @@
                 <th>주소</th>
             </tr>
         </thead>
-        <tbody>
-
+        <tbody> <!--정보는 tbody에-->
+            <tr>
+                <td>1</td> <!--<th>와 <td>의 차이 = 가운데 정렬-->
+                <td>김구라</td>
+                <td>노량진</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>해골</td>
+                <td>행신동</td>
+            </tr>
         </tbody>
     </table>
-    
+
+    <h1>tfoot이 있는 table</h1> <!--<tfoot>은 <thead> 다음에 집어 놓음, 그래도 맨 밑에 나옴-->
+    <table border="1">
+        <caption>GS25 현금, 카드 매출 내역</caption>
+        <colgroup>
+            <col width="100">
+            <col width="100">
+            <col width="100">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>상품명</th>
+                <th>현금</th>
+                <th>카드</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>합계</th>
+                <td>4,300원</td>
+                <td>800원</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>삼각김밥</td>
+                <td>800원</td>
+                <td>0원</td>
+            </tr>
+            <tr>
+                <td>도시락</td>
+                <td>3,500원</td>
+                <td>0원</td>
+            </tr>
+            <tr>
+                <td>박카스</td>
+                <td>0원</td>
+                <td>800원</td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
