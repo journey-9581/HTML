@@ -12,7 +12,25 @@
     <p id="two" 
         onmouseover="document.querySelector('#two').innerText='김구라';">
         어쩌구</p>
-    <p id="three">저쩌구</p>
+    <p id="three" onmouseover="change();">저쩌구</p>
+
+    <!-- 아래 버튼을 클릭하면 id가 result로 지정된 p 요소에 "버튼을 클릭했네?" 라고 출력해보세요 -->
+    <button onclick="clicked();">클릭</button>
+    <p id="result"></p>
+    <script>
+        function change(){
+            document.querySelector("#three").innerText="해골";
+            document.querySelector("#three").style.color="red";
+            document.querySelector("#three").style.fontSize="100px";
+        }
+
+        function clicked()
+        {
+            document.querySelector('#result').innerText='버튼을 클릭했네?';
+        }
+        //function 만드는 법: function 이름(){}
+        //함수는 특정 시점에 일괄 실행할 javascript를 모아 놓을 수 있다
+    </script>
 </body>
 </html>
 <!-- 특정 UI를 원하는 시점에 바꾸는 것이 가능 -->
