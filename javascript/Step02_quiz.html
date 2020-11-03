@@ -6,10 +6,13 @@
     <title>Step02_quiz.html</title>
 </head>
 <body>
-    <button id="countBtn">0</button>
+    <button onclick="increase();" id="countBtn">0</button>
     <script>
         //버튼을 누를 때마다 button의 innertext가 1씩 증가 되게 해보세요
-        
+        function increase() {
+            var a=document.querySelector("#countBtn").innerText;
+            parseFloat(a)=parseFloat(a+1);
+        }
     </script>
 </body>
 </html>
