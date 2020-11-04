@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step03_object3.html</title>
+</head>
+<body>
+    <script>
+        var car1={
+            name:"소나타", 
+            color:"sliver", 
+            drive:function(){
+                alert(this.name+"이(가) 달려요"); //자신의 object를 this로 가르킴
+            }
+        };
+        var car2={
+            name:"산타페", 
+            color:"white", 
+            drive:function(){
+                alert(this.name+"이(가) 달려요");
+            }
+        };
+        var car3={};
+        car3.name="포터";
+        car3.color="blue";
+        car3.drive=function(){
+            alert(this.name+"이(가) 달려요");
+        };
+    </script>
+</body>
+</html>
+<!--object 안에 function이 들어갈 수 있음-->
+<!--
+    car1.drive() = document.querySelector() : 같은 모양 즉, document라는 object 안에 querySelector라는 function이 들어있는 것
+-->
