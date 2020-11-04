@@ -11,7 +11,7 @@
             name:"소나타", 
             color:"sliver", 
             drive:function(){
-                alert(this.name+"이(가) 달려요"); //자신의 object를 this로 가르킴
+                alert(this.name+"이(가) 달려요"); // 코딩 시점의 object reference 값을 this로 가르킴
             }
         };
         var car2={
@@ -27,10 +27,23 @@
         car3.drive=function(){
             alert(this.name+"이(가) 달려요");
         };
+        //car1 object의 특정방 참조
+        var a=car1.name;
+        var b=car1.color;
+        //car2 object의 특정방 참조
+        var c=car2.name;
+        var d=car2.color;
+        //car1, car2 object에 있는 drive() 함수 호출
+        car1.drive();
+        car2.drive();
     </script>
 </body>
 </html>
-<!--object 안에 function이 들어갈 수 있음-->
+<!-- object 안에 function이 들어갈 수 있음 -->
 <!--
     car1.drive() = document.querySelector() : 같은 모양 즉, document라는 object 안에 querySelector라는 function이 들어있는 것
+-->
+<!-- 
+    car1.drive = 이 함수를 가르키는, 참조하는 것
+    car1.drive(); = 이 함수를 실제로 사용(call)하겠다는 것
 -->
