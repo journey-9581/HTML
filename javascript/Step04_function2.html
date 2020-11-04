@@ -23,12 +23,16 @@
         }
 
         // 함수의 인자를 전달 받을 매개변수 arg 정의하기
-        function welcome(arg) {
+        function welcome(arg){
             //arg에는 함수를 호출하면서 전달한 값이 들어있음
             alert(arg+"님 환영합니다.");
         } // welcome("해골"); - 해골님 환영합니다
           // welcome(); - undefined님 환영합니다
 
+        // 위와 같은 동작을 하는 함수를 아래와 같이 정의할 수도 있음
+        var welcom2=function(arg){
+            alert(arg+"님 환영합니다.");
+        }
     </script>
 </body>
 </html>
