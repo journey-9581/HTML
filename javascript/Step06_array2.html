@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step06_array2.html</title>
+</head>
+<body>
+    <h1>array type 테스트</h1>
+    <button onclick="printNames();">출력하기</button>
+    <button onclick="printNames2();">출력하기2</button>
+    <script>
+        //특정 블럭을 원하는만큼 반복 수행하기 위한 반복문
+        for(let i=0; i<5; i++){ //i<n: n번 만큼 반복됨
+            console.log(i+"번째 수행됨");
+        }
+
+        let names=['김구라', '해골', '원숭이', '주뎅이', '덩어리'];
+        //배열에 저장된 이름을 콘솔창에 하나씩 순서대로 출력해보세요
+        //출력하기를 눌렀을 때 콘솔창에 배열에 저장된 이름이 하나씩 순서대로 출력되게 하세요
+        function printNames() {
+        console.log(names[0]);
+        console.log(names[1]);
+        console.log(names[2]);
+        console.log(names[3]);
+        console.log(names[4]);
+        };
+
+        //array와 함께 사용하는 가장 기본적인 배열문
+        function printNames2(){
+            for(let i=0; i<5; i++){ //i<n의 n은 배열의 size인 names.length로 대체 가능, ++: 변수 안에 있는 값을 1씩 증가 시키는 연산자
+            console.log(names[i]);
+            }
+        }
+        //names.length로 설정하고 push를 통해 배열에 추가 저장을 하더라도 제대로 작동이 잘 됨 (length로 지정을 해놨기 때문)
+        //console창에서 push 등 변경한 내용은 새로고침 전까지 적용됨
+    </script>
+</body>
+</html>
