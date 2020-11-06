@@ -4,25 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Step07_EventListener.html</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            border: 1px solid red;
+        }
+    </style>
 </head>
 <body>
     <h1>EventListener 테스트</h1>
     <button onclick="clicked();">클릭</button>
     <button id="myBtn">클릭2</button>
+    <div class="box" id="myDiv"></div>
+    <div class="box">
     <script>
         function clicked(){
             alert("버튼을 눌렀네요?"); //global area
         }
+        document.querySelector("#myBtn").addEventListener("click", function(){
+            alert("버튼을 눌렀네요?");
+        }); //(string type / "event name", function type / call back function)
+        //참조된 내용에 이벤트가 일어나면 함수가 호출됨
 
-        let myName="김구라"; //global area
-
-        (function(){
-            let yourName="해골"; 
-        })();
-
-        function test(){
-            let ourName="원숭이"; //global area
-        }
+        // id가 myDiv인 요소에 "click" 이벤트가 일어나면 호출되는 함수 등록
+        document.querySelector("#myDiv")
+            .addEventListener("click", function(){
+                //document.querySelector("#myDiv").innerText="clicked!";
+                this.innerText="clicked!";
+        });
     </script>
 </body>
 </html>

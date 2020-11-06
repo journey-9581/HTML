@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step07_quiz.html</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            border: 1px solid red;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>EventListener 테스트</h1>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div> <!-- div.box*20 -->
+    <script>
+        /* Hint
+        1. for 
+        2. document.querySelectorALL("div")[i].addEventListener();
+        3. this.innerText="clicked";
+        */
+       (function(){
+        let divs=document.querySelectorAll("div")  
+        
+           for(let i=0; i<divs.length; i++){ //20=document.querySelectorAll("div").length
+            //document.querySelecotrAll("div")[0] = 첫번째 div, document.querySelecotrAll("div")[1] 두번째 div... 따라서 i로 []값을 지정해주면 해결
+            divs[i].addEventListener("click", function(){
+                    this.innerText="clicked!";
+                });
+            }
+        })();
+
+    </script>
+</body>
+</html>
