@@ -20,16 +20,28 @@
 
 
         document.querySelector("#checkBtn").addEventListener("click", function(){
-            let a=document.querySelector("#height").innerText
-            let b=document.querySelector("#weight").innerText
+            let a=document.querySelector("#height").value
+            let b=document.querySelector("#weight").value
 
-            a
-            
             if(a||b == true){
                 document.querySelector("#result").innerText="탑승 가능!";
             }
         });
 
+        document.querySelector("#checkBtn").addEventListener("click",function(){
+            // 1. 입력한 키를 읽어오기
+            let a=document.querySelector("#height").value;
+            // 2. 입력한 몸무게를 읽어오기
+            let b=document.querySelector("#weight").value;
+            // 3. 만일 키가 150 이상이고 몸무게가 100 미만이면
+            // "탈 수 있습니다"를 p 요소에 출력하고
+            // 그렇지 않으면 "탈 수 없습니다"를 p 요소에 출력하기
+            if(a >= 150 && b < 100){
+                document.querySelector("#result").innerText="탑승 가능!";
+            }else{
+                document.querySelector("#result").innerText="탑승 불가능!";
+            }
+        });
     </script>
 </body>
 </html>
