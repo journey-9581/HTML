@@ -66,7 +66,7 @@
             // 변수에 저장된 값으로 선의 굵기 지정
             context.lineWidth=currentWidth;
         });
-        
+
         //canvas에 mousemove 이벤트 처리
         canvas.addEventListener("mousemove", function(event){
             // 만일 현재 그림을 그리고 있는 상태 일때
@@ -100,7 +100,7 @@
         document.querySelector("#fillBackBtn")
             .addEventListener("click", function(){
                 // 현재 선택된 색상을 채울 색으로 지정하고
-                context.fillstyle=color;
+                context.fillStyle=color;
                 // fillRect(x, y, width, height)로 지정된 사각형 영역을 채운다
                 context.fillRect(0, 0, 500, 500);
             });
