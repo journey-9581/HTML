@@ -9,6 +9,10 @@
         .row > div{
             border: 1px dashed greenyellow;
         }
+        .col > img{
+            /* 최대 폭이 부모 컨테이너를 넘지 못하도록 제한 */
+            max-width: 100%;
+        }
     </style>
 </head>
 <body>
@@ -21,6 +25,12 @@
         <div class="col">칼럼1</div>
         <div class="col">칼럼2</div>
         <div class="col">칼럼3</div>
+    </div>
+    <h1>칼럼에 이미지 배치해보기</h1>
+    <div class="row">
+        <div class="col"><img src="images/image1.png"></div>
+        <div class="col"><img src="images/image2.png"></div>
+        <div class="col"><img src="images/image3.png"></div>
     </div>
 </body>
 </html>
