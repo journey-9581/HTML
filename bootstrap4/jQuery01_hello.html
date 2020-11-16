@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery01_hello.html</title>
+    <!-- jQuery 로딩하기 -->
+    <script src="./js/jquery-3.5.1.js"></script>
+</head>
+<body>
+    <button id="changeBtn">바꾸기</button>
+    <button id="changeBtn2">바꾸기2</button>
+    <p id="one">p1</p>
+    <p>p2</p>
+    <p class="my-class">p3</p>
+    <p class="my-class">p4</p>
+    <p class="my-class">p5</p>
+    <script>
+        document.querySelector("#changeBtn")
+            .addEventListener("click", function(){
+                let divs=document.querySelectorAll("p");
+                for(let i=0; i<divs.length; i++){
+                    divs[i].innerText="김구라";
+                }
+            });
+       $("#changeBtn2").on("click", function(){
+            $("p").text("해골");
+       });
+    </script>
+</body>
+</html>
+<!--
+    $(선택자).동작함수();
+    $: 제이쿼리를 의미,제이쿼리에 접근할 수 있게 해주는 식별자
+    선택자를 이용하여 원하는 HTML 요소를 선택하고, 동작 함수를 정의하여 선택된 요소에 원하는 동작을 설정
+
+    $("p").text("오잉?");
+    $(".my-class").css("border", "1px solid blue");
+    $("#one").css("color", "red");
+-->
+
+<!--    
+        //(bootstrap4의 javascript와 jquery가 있어야함)
+        //알림 닫기 버튼을 누르면 실행할 함수 등록
+        //"close.bs.alert"는 bootstrap4에서 임의로 발생시키는 이벤트
+        $(".alert").on("close.bs.alert",function(){
+            //원하는 작업이 있다면 여기서 하면 된다
+            alert("close!");
+        });
+-->
